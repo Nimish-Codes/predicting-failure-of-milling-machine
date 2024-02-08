@@ -14,7 +14,7 @@ def load_data():
 # data_load_state = st.text('Loading data...')
 data = load_data()
 # data_load_state.text("Data loaded successfully!")
-st.write('This is a trained model to predict the failure of a *[milling machine](https://www.google.com/search?q=what+is+milling+machine&oq=what+is+milling+machine&gs_lcrp=EgZjaHJvbWUyDggAEEUYFBg5GIcCGIAEMgcIARAAGIAEMgwIAhAAGBQYhwIYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyCAgHEAAYFhgeMgoICBAAGA8YFhgeMgoICRAAGA8YFhge0gEINjY1NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8)* \naccording to user given conditions at a time')
+st.write('This is a trained model to predict the failure of a *[milling machine](https://www.google.com/search?q=what+is+milling+machine&oq=what+is+milling+machine&gs_lcrp=EgZjaHJvbWUyDggAEEUYFBg5GIcCGIAEMgcIARAAGIAEMgwIAhAAGBQYhwIYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyCAgHEAAYFhgeMgoICBAAGA8YFhgeMgoICRAAGA8YFhge0gEINjY1NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8)* /n according to user given conditions at a time')
 
 # Preprocessing
 # Drop irrelevant columns like UDI, Product ID, and Type
@@ -62,4 +62,4 @@ else:
 st.subheader('Prediction Probability')
 st.write('Probability of machine failure:', prediction_proba[0][1])
 
-st.write('\nNote: tool_wear means how much of the tool is lost due to friction with different surfaces')
+st.write('Note: tool_wear means how much of the tool is lost due to friction with different surfaces')
