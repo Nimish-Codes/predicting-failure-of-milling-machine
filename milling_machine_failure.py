@@ -3,10 +3,12 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
+from sklearn.utils import shuffle
 
 # Load the dataset
+dta = pd.read_csv('milling_dataset.csv')
 def load_data():
-    data = pd.read_csv('milling_dataset.csv')
+    data = shuffle(dta)
     return data
 
 data_load_state = st.text('Loading data...')
