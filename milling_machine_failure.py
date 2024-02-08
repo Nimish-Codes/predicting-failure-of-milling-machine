@@ -17,7 +17,7 @@ data_load_state.text("Data loaded successfully!")
 
 # Preprocessing
 # Drop irrelevant columns like UDI, Product ID, and Type
-data.drop(['UDI', 'Product ID', 'Type'], axis=1, inplace=True)
+data.drop(['UDI', 'Product ID', 'Type', 'HDF', 'PWF', 'OSF', 'RNF'], axis=1, inplace=True)
 
 # data = data[['Air temperature (K)', 'Process temperature (K)', 'Rotational speed (rpm)', 'Torque (Nm)', 'Tool wear (min)', 'Machine failure', 'HDF', 'OSF', 'PWF', 'RNF', 'TWF']]
 
