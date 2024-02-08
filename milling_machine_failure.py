@@ -21,11 +21,11 @@ data.drop(['UDI', 'Product ID', 'Type'], axis=1, inplace=True)
 st.sidebar.header('Adjust Input Values')
 
 # Input fields for adjusting values
-air_temp = st.sidebar.slider('Air Temperature [K]', 295, 305, 300)
-process_temp = st.sidebar.slider('Process Temperature [K]', 306, 314, 310)
-rotational_speed = st.sidebar.slider('Rotational Speed [rpm]', 1168, 2886, 2000)
-torque = st.sidebar.slider('Torque [Nm]', 3.8, 76.6, 40)
-tool_wear = st.sidebar.slider('Tool Wear [min]', 0, 253, 120)
+air_temp = st.sidebar.slider('Air Temperature [K]', 295.0, 305.0, 300.0, 1.0)
+process_temp = st.sidebar.slider('Process Temperature [K]', 306.0, 314.0, 310.0, 1.0)
+rotational_speed = st.sidebar.slider('Rotational Speed [rpm]', 1168, 2886, 2000, 10)
+torque = st.sidebar.slider('Torque [Nm]', 3.8, 76.6, 40.0, 0.1)
+tool_wear = st.sidebar.slider('Tool Wear [min]', 0, 253, 120, 1)
 
 # Prepare user input for prediction
 user_input = pd.DataFrame({
