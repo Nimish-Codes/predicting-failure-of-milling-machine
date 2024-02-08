@@ -31,6 +31,8 @@ rotational_speed = st.sidebar.slider('Rotational Speed (rpm)', 1168, 2886, 2000,
 torque = st.sidebar.slider('Torque (Nm)', 3.8, 76.6, 40.0, 0.1)
 tool_wear = st.sidebar.slider('Tool Wear (min)', 0, 253, 120, 1)
 
+st.write('tool_wear means how much of the tool is lost due to friction with different surfaces')
+
 # Prepare user input for prediction
 user_input = pd.DataFrame({
     'Air temperature (K)': [air_temp],
@@ -54,9 +56,9 @@ prediction_proba = model.predict_proba(user_input)
 # Display prediction result
 st.header('Predictive Maintenance Result')
 if prediction[0] == 1:
-    st.error('Machine failure is predicted!')
+    st.error('Machine failure is predicted soon!')
 else:
-    st.success('No machine failure predicted.')
+    st.success('No machine failure predicted in near future.')
 
 st.subheader('Prediction Probability')
 st.write('Probability of machine failure:', prediction_proba[0][1])
