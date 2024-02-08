@@ -31,8 +31,6 @@ rotational_speed = st.sidebar.slider('Rotational Speed (rpm)', 1168, 2886, 2000,
 torque = st.sidebar.slider('Torque (Nm)', 3.8, 76.6, 40.0, 0.1)
 tool_wear = st.sidebar.slider('Tool Wear (min)', 0, 253, 120, 1)
 
-st.write('tool_wear means how much of the tool is lost due to friction with different surfaces')
-
 # Prepare user input for prediction
 user_input = pd.DataFrame({
     'Air temperature (K)': [air_temp],
@@ -62,3 +60,5 @@ else:
 
 st.subheader('Prediction Probability')
 st.write('Probability of machine failure:', prediction_proba[0][1])
+
+st.write('\nNote: tool_wear means how much of the tool is lost due to friction with different surfaces')
