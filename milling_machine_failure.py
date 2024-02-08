@@ -11,9 +11,10 @@ def load_data():
     data = shuffle(dta)
     return data
 
-data_load_state = st.text('Loading data...')
+# data_load_state = st.text('Loading data...')
 data = load_data()
-data_load_state.text("Data loaded successfully!")
+# data_load_state.text("Data loaded successfully!")
+st.banner('gg')
 
 # Preprocessing
 # Drop irrelevant columns like UDI, Product ID, and Type
