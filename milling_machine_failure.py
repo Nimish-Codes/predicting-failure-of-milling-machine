@@ -14,7 +14,7 @@ def load_data():
 # data_load_state = st.text('Loading data...')
 data = load_data()
 # data_load_state.text("Data loaded successfully!")
-st.banner('gg')
+st.write('This is a trained model to predict the failure of a *[milling machine](https://www.google.com/search?q=what+is+milling+machine&oq=what+is+milling+machine&gs_lcrp=EgZjaHJvbWUyDggAEEUYFBg5GIcCGIAEMgcIARAAGIAEMgwIAhAAGBQYhwIYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyCAgHEAAYFhgeMgoICBAAGA8YFhgeMgoICRAAGA8YFhge0gEINjY1NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8)*')
 
 # Preprocessing
 # Drop irrelevant columns like UDI, Product ID, and Type
