@@ -5,7 +5,6 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 
 # Load the dataset
-@st.cache
 def load_data():
     data = pd.read_csv('milling_dataset.csv')
     return data
